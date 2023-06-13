@@ -15,6 +15,30 @@ public class MemberBean {
 	private String member_sms_agree;
 	private String member_start;
 	
+	
+	public MemberBean() {
+
+	}
+	
+	public MemberBean(String member_code, String member_id, String member_pw, String member_name, String member_birth,
+			String member_phone, String member_email, String pw_question, String pw_answer,
+			String member_marketing_agree, String member_email_agree, String member_sms_agree, String member_start) {
+		super();
+		this.member_code = member_code;
+		this.member_id = member_id;
+		this.member_pw = member_pw;
+		this.member_name = member_name;
+		this.member_birth = member_birth;
+		this.member_phone = member_phone;
+		this.member_email = member_email;
+		this.pw_question = pw_question;
+		this.pw_answer = pw_answer;
+		this.member_marketing_agree = member_marketing_agree;
+		this.member_email_agree = member_email_agree;
+		this.member_sms_agree = member_sms_agree;
+		this.member_start = member_start;
+	}
+	
 	public String getMember_code() {
 		return member_code;
 	}
@@ -93,5 +117,7 @@ public class MemberBean {
 	public void setMember_start(String member_start) {
 		this.member_start = member_start;
 	}
+	
+	
 	
 }
