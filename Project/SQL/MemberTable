@@ -22,7 +22,7 @@ create table member(
 	member_marketing_agree varchar2(12),
 	member_email_agree varchar2(12),
 	member_sms_agree varchar2(12),
-	member_point varchar2(10)
+	member_point varchar2(12)
 ) ;
 
 select * from member
