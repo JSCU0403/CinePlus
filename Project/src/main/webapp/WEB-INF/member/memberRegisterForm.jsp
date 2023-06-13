@@ -32,7 +32,7 @@
 			<a style="color: #DE0000">*&nbsp&nbsp</a>비밀번호
 		</td>
 		<td>
-			<input type="password" class="inputText3" name="member_pw"><br>
+			<input type="password" class="inputText3" name="member_pw" id="member_pw" value="${mb.member_pw}"><br>
 		</td>
 	</tr>
 	<tr>
@@ -86,6 +86,14 @@
 		<td>
 			<a class="register-infor">비밀번호 찾기 시 사용할 답변을 입력해주세요</a>
 		</td>
+	</tr>
+	<tr>
+     	 <td>
+      	   <a style="color: #DE0000">*&nbsp&nbsp</a>생년월일
+    	  </td>
+     	 <td>
+        	 <input type="text" class="inputText3" name="member_birth" value="${mb.member_birth}"><br>
+     	 </td>
 	</tr>
 	<tr>
 		<td>

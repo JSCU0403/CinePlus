@@ -9,11 +9,8 @@
 	<!-- 회원가입 -->
 	<insert id="InsertMember">
 		insert into
-		member(member_code, member_id, member_pw,
-		member_name, member_birth, member_phone, member_email, pw_question,
-		pw_answer, member_start)
-		values(member_seq.nextval,
-		#{member_id},#{member_pw},#{member_name},#{member_birth},#{member_phone},#{member_email},#{pw_question},#{pw_answer},sysdate)
+		member(member_code, member_id, member_pw, member_name, member_birth, member_phone, member_email, pw_question, pw_answer, member_start, member_marketing_agree, member_email_agree, member_sms_agree)
+		values(member_seq.nextval, #{member_id},#{member_pw},#{member_name},#{member_birth},#{member_phone},#{member_email},#{pw_question},#{pw_answer},sysdate,#{member_marketing_agree},#{member_email_agree},#{member_sms_agree}) 
 	</insert>
 
 	<!-- 중복체크 -->
@@ -22,7 +19,7 @@
 		where member_id = #{member_id}
 	</select>
 
-	<!-- Id넘기기 -->
+	<!-- Code넘기기 -->
 	<select id="GetMovieByCode" resultType="member.model.MemberBean">
 		select * from member
 		where member_code = #{member_code}
@@ -73,4 +70,11 @@
 	<select id="GetMemberById" resultType="member.model.MemberBean">
 		select * from member where member_id = #{input_id}
 	</select>
+	
+	<!-- 아이디찾기(이름,생년월일,폰번호) -->
+	<select id="FindId" resultType="member.model.MemberBean">
+		select * from member
+		where member_name=#{member_name} and member_birth=#{member_birth} and member_phone=#{member_phone}
+	</select>
+	
 </mapper>
